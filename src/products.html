@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Amazon.com - Products</title>
+  </head>
+  <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+    * {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+    }
+    
+    body {
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-bottom: 12rem;
+        text-align: justify;
+    }
+    
+    .container p {
+        margin-top: 2rem;
+    }
+    
+    .container img {
+        display: block;
+        margin: 2rem auto;
+        align-self: center;
+    }
+    
+    header {
+        height: 70px;
+        background-color: #131921;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        align-items: center;
+        gap: 4rem;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+    
+    ul a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex: 1;
+    }
+    
+    .search-input {
+        width: 100%;
+        height: 40px;
+        border: 1px solid #ccc;
+        padding: 0 10px;
+    }
+    
+    .search-button {
+        width: 40px;
+        height: 42px;
+        background-color: #febd68;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: #232323;
+    }
+    
+    .heading {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    
+    form {
+        margin: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+    }
+    
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+    
+    .input-container label {
+        font-size: 1.6rem;
+    }
+    
+    .input-container input,
+    textarea {
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        border: 1px solid #555;
+        resize: none;
+    }
+    
+    button {
+        align-self: flex-start;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        border: none;
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .products-container {
+        display: flex;
+    }
+    
+    .product-card {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ccc;
+        padding: 10px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 60px;
+    }
+    
+    .product-image {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .product-image img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .product-title {
+        font-size: 24px;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .product-price {
+        font-size: 20px;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .add-to-cart-btn,
+    .view-btn {
+        background-color: cornflowerblue;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: all 0.25s ease;
+    }
+    
+    .add-to-cart-btn:hover,
+    .view-btn:hover {
+        opacity: 0.8;
+    }
+    
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    
+    footer {
+        height: 6rem;
+        background-color: #131921;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: #ebeded;
+        text-align: center;
+    }
+    
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1200px;
+        width: 100%;
+        align-items: center;
+        gap: 4rem;
+        margin: 0 auto;
+    }
+    
+    .footer-section {
+        flex: 1;
+    }</style>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <img class="logo" src="images/logo.png" alt="Amazon Logo" />
+        <div class="search">
+          <input class="search-input" type="text" />
+          <button class="search-button">Search</button>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <h1 class="heading">Products</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id recusandae
+        quaerat architecto itaque voluptates iste quidem tenetur ut tempore
+        accusantium, ea molestiae, quas harum quod? Laboriosam quo magni
+        officiis voluptas dicta libero veniam error laborum maiores delectus
+        nulla odit eos accusamus enim, veritatis reprehenderit quam iure quis
+        dolores cum! Ipsa totam asperiores quae consectetur quidem eius? Rerum
+        quibusdam perferendis nisi fuga tempore ab mollitia amet.
+      </p>
+      <p>
+        Lorem architecto laboriosam eius quas in voluptatibus animi perferend
+        tenetur libero laudantium nisi, debitis placeat assumenda cum dolore
+        magnam. Necessitatibus error consectetur temporibus, quis distinctio
+        modi culpa rem minima esse incidunt nemo cumque facere rerum obcaecati
+        magni nihil, ducimus eligendi blanditiis hic cum expedita quia
+        laboriosam at repellendus.
+      </p>
+      <div class="products-container">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/shoes.jpg" alt="Product Image" />
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">Leather Shoes</h2>
+            <h4 class="product-price">$300</h4>
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="view-btn">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/ring.jpg" alt="Product Image" />
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">Women Ring</h2>
+            <h4 class="product-price">$2500</h4>
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="view-btn">View</button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="images/belt.jpg" alt="Product Image" />
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">Leather Belt</h2>
+            <h4 class="product-price">$100</h4>
+            <button class="add-to-cart-btn">Add to Cart</button>
+            <button class="view-btn">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-wrapper">
+        <img class="logo" src="images/logo.png" alt="Amazon Logo" />
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Company info</p>
+        </div>
+        <div class="footer-section">
+          <h3>Products</h3>
+          <p>Products we offer</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>How to reach us.</p>
+        </div>
+      </div>
+      <p>Copyright &copy; 2024 Amazon&trade;</p>
+    </footer>
+  </body>
+</html>
